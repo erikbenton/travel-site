@@ -70,14 +70,13 @@
 var $ = __webpack_require__(1);
 var Person = __webpack_require__(2);
 
+alert("ABC 321");
 
 var john = new Person("John Doe", "green");
 john.greet();
 
 var jane = new Person("Jane Smith", "blue");
 jane.greet();
-
-$("h1").remove();
 
 /***/ }),
 /* 1 */
