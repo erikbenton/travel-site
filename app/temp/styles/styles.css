@@ -1160,6 +1160,21 @@ a {
 
 @media (min-width: 800px) {
 
+.site-header {
+		/*Be careful with variables as post-hexrgba 
+		is very picky about whitespace*/
+		background-color: rgba(47,85,114,0.3);
+		position: fixed
+
+}
+
+		.site-header--dark {
+			background-color: rgba(23,51,72,0.85);
+		}
+	}
+
+@media (min-width: 800px) {
+
 .site-header__btn-container {
 			float: right
 	}
@@ -1175,6 +1190,10 @@ a {
 		        transform: translateX(-50%) scale(.8);
 		-webkit-transform-origin: 50% 0;
 		        transform-origin: 50% 0;
+		-webkit-transition: -webkit-transform 0.3s ease-out;
+		transition: -webkit-transform 0.3s ease-out;
+		transition: transform 0.3s ease-out;
+		transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 
 	}
 
@@ -1186,6 +1205,11 @@ a {
 			        transform: translateX(0)
 
 	}
+
+			.site-header--dark .site-header__logo {
+				-webkit-transform: scale(.57);
+				        transform: scale(.57);
+			}
 	}
 
 .site-header__logo__graphic {
@@ -1270,16 +1294,6 @@ a {
 			-webkit-transform: rotate(-45deg) scaleX(1.25) translateY(1px);
 			        transform: rotate(-45deg) scaleX(1.25) translateY(1px);
 		}
-
-@media (min-width: 800px) {
-
-.site-header {
-		/*Be careful with variables as post-hexrgba 
-		is very picky about whitespace*/
-		background-color: rgba(47,85,114,0.3)
-
-}
-	}
 
 .site-header__menu-content {
 		opacity: 0;
